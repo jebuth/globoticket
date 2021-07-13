@@ -6,12 +6,12 @@ const Home = (props) => {
         <View style={styles.container}>
             <Image 
                 style = {styles.globologo}
-                source={require('./images/_Export_globoticket-bug-black.png')}
+                source={require('./images/logo.png')}
             />
             <Text style={styles.title}>Welcome to GloboTicket</Text>
-            <Text style={styles.subtitle}>{props.userName}</Text>
+            <Text style={styles.subtitle}>{props.username}</Text>
             <View style={styles.container}>
-                <Text style={styles.content}>{props.introText}</Text>
+                <Text style={styles.content}>{introText}</Text>
             </View>
         </View>
     );
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     },
     content: {
         fontFamily: 'Ubuntu-Light',
-        fontWeight: 300,
+        fontWeight: '300',
     }
 
 });
