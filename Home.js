@@ -24,13 +24,14 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         padding: 20,
+        paddingTop: 90
     },
     textContainer: {
         textAlign: 'center',
         paddingTop: 10
     },
     globologo: {
-        height: 100,
+        height: 150,
         width: 150
     },
     title: {
