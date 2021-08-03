@@ -4,6 +4,7 @@ import { StatusBar } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from './Home';
+import Tickets from './Tickets'
 
 const Stack = createStackNavigator();
 
@@ -17,10 +18,20 @@ const App: () => React$Node = () => {
         headerMode='float'>
           <Stack.Screen
           name='Home'
-          component={Home}
           options={{
             headerShown: false
-          }} />
+          }}>
+            {(props) => <Home {...props} username ='Sports' />}
+          </Stack.Screen>
+
+          <Stack.Screen
+            name='Tickets'
+            component={Tickets}
+            options={{
+              headerTitleAlign: 'center',
+              headerTitleStyle: {fontFamily: 'Ubuntu-Regular'}
+            }}
+          />
       </Stack.Navigator>
       </NavigationContainer>
     </>
