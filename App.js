@@ -4,7 +4,8 @@ import { StatusBar } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from './Home';
-import Tickets from './Tickets'
+import Tickets from './Tickets';
+import Contact from './Contact';
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,16 @@ const App: () => React$Node = () => {
               headerTitleStyle: {fontFamily: 'Ubuntu-Regular'}
             }}
           />
+
+          <Stack.Screen
+            name='Contact'
+            component={Contact}
+            options={{
+              headerTitleAlign: 'center',
+              headerTitleStyle: {fontFamily: 'Ubuntu-Regular'},
+              headerTitle: 'Contact Us'
+            }}
+          />  
 
       </Stack.Navigator>
       </NavigationContainer>

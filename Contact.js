@@ -19,7 +19,7 @@ const Contact = ({navigation}) => {
 
     return (
         <View style={styles.form}>
-            <Text style={style.labels}>
+            <Text style={styles.labels}>
                 Name: *required
             </Text>
             <TextInput 
@@ -29,7 +29,7 @@ const Contact = ({navigation}) => {
                 autoCapitalize='words'
                 selectTextOnFocus={true}
             />
-            <Text style={style.labels}>
+            <Text style={styles.labels}>
                 Email: *required
             </Text>
             <TextInput 
@@ -38,7 +38,7 @@ const Contact = ({navigation}) => {
                 value={formEmail}
                 selectTextOnFocus={true}
             />
-            <Text style={style.labels}>
+            <Text style={styles.labels}>
                 Phone Number:
             </Text>
             <TextInput 
@@ -47,7 +47,7 @@ const Contact = ({navigation}) => {
                 value={formPhoneNumber}
                 selectTextOnFocus={true}
             />
-            <Text style={style.labels}>
+            <Text style={styles.labels}>
                 Message: *required
             </Text>
             <TextInput 
