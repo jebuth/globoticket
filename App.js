@@ -16,12 +16,13 @@ const App: () => React$Node = () => {
       <Stack.Navigator
         initialRouteName='Home'
         headerMode='float'>
+          
           <Stack.Screen
           name='Home'
           options={{
             headerShown: false
           }}>
-            {(props) => <Home {...props} username ='Sports' />}
+            {(props) => <Home {...props} username ='Sports Fan' />}
           </Stack.Screen>
 
           <Stack.Screen
@@ -32,6 +33,7 @@ const App: () => React$Node = () => {
               headerTitleStyle: {fontFamily: 'Ubuntu-Regular'}
             }}
           />
+
       </Stack.Navigator>
       </NavigationContainer>
     </>

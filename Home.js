@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Image, Text, StyleSheet} from 'react-native';
+import Menu from './Menu';
 
 const Home = (props) => {
     return(
@@ -10,25 +11,34 @@ const Home = (props) => {
             />
             <Text style={styles.title}>Welcome to GloboTicket</Text>
             <Text style={styles.subtitle}>{props.username}</Text>
-            <View style={styles.container}>
+            <Image
+                style={styles.heroimage}
+                source={require('./images/boxing.jpg')}
+            />
+            <View style={styles.textcontainer}>
                 <Text style={styles.content}>{introText}</Text>
+            </View>
+            <View style={styles.menu}>
+                <Menu/>
             </View>
         </View>
     );
 };
 
-const introText = 'some text';
+const introText = `Are you redy for the best events? Whether you are into 
+sports, music, or the most amazing seminars we have got you convered. Get 
+ready to purchase great tickets at the best prices. Events are in-person and virtual`;
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         alignItems: 'center',
-        padding: 20,
-        paddingTop: 90
+        paddingTop: 20,
+        paddingBottom: 20,
+        flex: 1
     },
-    textContainer: {
-        textAlign: 'center',
-        paddingTop: 10
+    textcontainer: {
+        padding: 20
     },
     globologo: {
         height: 150,
@@ -44,6 +54,14 @@ const styles = StyleSheet.create({
     content: {
         fontFamily: 'Ubuntu-Light',
         fontWeight: '300',
+    },
+    heroimage:{
+        height: 170,
+        width: '100%'
+    },
+    menu: {
+        position: 'absolute',
+        bottom: 30
     }
 
 });
